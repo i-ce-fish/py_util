@@ -45,12 +45,12 @@ jsonstr = read_file(json_file)
 # routers_tpl = read_file("{}/vue_templates/test.html".format(base_path))
 
 #  vue  模板
-vue_api_tpl=read_file('D:/python/util/code_generater/templates/api.js'.format(base_path))
-vue_router_tpl=read_file('D:/python/util/code_generater/templates/router.js'.format(base_path))
-vue_index_tpl=read_file('D:/python/util/code_generater/templates/index.vue'.format(base_path))
-vue_add_tpl=read_file('D:/python/util/code_generater/templates/add.vue'.format(base_path))
-vue_edit_tpl=read_file('D:/python/util/code_generater/templates/edit.vue'.format(base_path))
-vue_router_index_tpl=read_file('D:/python/util/code_generater/templates/router_index.js'.format(base_path))
+vue_api_tpl=read_file('./templates/api.js'.format(base_path))
+vue_router_tpl=read_file('./templates/router.js'.format(base_path))
+vue_index_tpl=read_file('./templates/index.vue'.format(base_path))
+vue_add_tpl=read_file('./templates/add.vue'.format(base_path))
+vue_edit_tpl=read_file('./templates/edit.vue'.format(base_path))
+vue_router_index_tpl=read_file('./templates/router_index.js'.format(base_path))
 
 
 data_list = json.loads(jsonstr)
