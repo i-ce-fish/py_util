@@ -1,0 +1,176 @@
+<template>
+    <div class="app-container">
+        <y-form
+                ref="{{ModelNameSingular}}Form"
+                :model="{{ModelNameSingular}}Form"
+                label-width="80px"
+        >
+            <el-row type="flex" justify="end">
+                <el-form-item>
+                    <el-button type="success" @click="add">添加{{ModuleNameCn}}</el-button>
+                </el-form-item>
+            </el-row>
+
+
+            {#  判断是否含有可搜索条件，显示搜索表单与按钮#}
+            {% for Field in Fields%}
+            {% if Field.Searchable %}
+            <el-row type="flex" justify="space-between">
+                <el-col :span="20">
+                    <el-row>
+
+                        {% for Field in Fields%}
+                        {% if Field.Searchable %}
+                        <el-col :span="6">
+                            <el-form-item label="{{Field.FieldNameCn}}:" prop="{{Field.FieldNameEn}}">
+
+                                {#  判断Field.FieldType是否布尔类型，直接显示为单选框  #}
+                                {% if  Field.FieldType == 'Boolean'  %}
+                                <y-radio
+                                        {% else %}
+                                <{{ Field.VueComponent }}
+                                {% endif %}
+                                v-model="{{ModelNameSingular}}Form.{{Field.FieldNameEn}}"
+                                {#  判断Field.SelectAPi长度不为0就添加api属性  #}
+                                {% if Field.SelectApi|trim|length != 0  %} api="{{Field.SelectApi}}" {% endif %}
+                                {#  判断Field.Editable 是否可编辑 #}
+                                {% if not Field.Editable  %}  disabled  {% endif %}
+                                {#  判断Field.VueComponentConfig 自定义配置 #}
+                                {% if Field.VueComponentConfig|trim|length != 0  %}  {{Field.VueComponentConfig}}  {% endif %}
+
+                                />
+                            </el-form-item>
+                        </el-col>
+                        {% endif %}
+                        {% endfor %}
+
+                    </el-row>
+                </el-col>
+                <el-col :span="4">
+                    <el-row type="flex" justify="end">
+                        <el-form-item>
+                            <el-button type="primary" @click="onSearch">查询</el-button>
+                            <el-button @click="reset" class="no-margin">重置</el-button>
+                        </el-form-item>
+                    </el-row>
+                </el-col>
+            </el-row>
+            {% break %}
+            {% endif %}
+            {% endfor %}
+
+        </y-form>
+
+        <y-table :data="{{ModelNamePlural}}Data" :pagination="pagination" @sortBy="sortBy" @changePage4List="getList">
+            <template>
+
+                {% for Field in Fields %}
+                    {% if Field.VueShowinList %}
+                        <el-table-column prop="{{Field.FieldNameEn}}" label="{{Field.FieldNameCn}}"
+                                         {% if Field.Orderable %} sortable="{{Field.FieldNameEn}}" {% endif %}
+                                         {% if Field.VueListWidth|trim|length != 0 %} width="{{Field.VueListWidth}}" {% endif %}
+                                         {% if Field.VueListConfig|trim|length != 0 %}  {{Field.VueListConfig}}  {% endif %} >
+
+                        {#  判断Field.FieldType是否布尔类型，直接显示为单选框  #}
+                        {% if  Field.FieldType == 'Boolean'  %}
+                            <template slot-scope="scope">
+                                <el-button :type="scope.row.{{Field.FieldNameEn}}? 'success':'info'" :icon="scope.row.{{Field.FieldNameEn}}? 'el-icon-check':'el-icon-close'" circle ></el-button>
+                            </template>
+                        {% endif %}
+                        </el-table-column>
+                    {% endif %}
+                {% endfor %}
+
+
+
+                <el-table-column label="操作" width="100px">
+                    <template slot-scope="{row}">
+                        <el-button type="text" size="small" @click="edit(row.id)">修改</el-button>
+                        <el-button type="text" size="small" @click="del(row.id)">删除</el-button>
+                    </template>
+                </el-table-column>
+            </template>
+        </y-table>
+    </div>
+</template>
+<script>
+    import {get{{ModelNamePlural|title}}, del{{ModelNameSingular|title}}} from "@/api/{{ModelNameSingular}}"
+
+    export default {
+        data() {
+            return {
+            {{ModelNameSingular}}Form: {},
+            {{ModelNamePlural}}Data: [],
+                pagination: {
+                pageNumber: 1,
+                    pageSize: 10
+            },
+            {#  搜索条件不表单校验、必填校验 {{ModelNameSingular}}Rules: {} #}
+        }
+        },
+        created() {
+            this.getList()
+        },
+        methods: {
+            async getList(param) {
+                const response = await get{{ModelNamePlural|title}}(
+                    {
+                        ...param,
+                        page: this.pagination.pageNumber,
+                        pagesize: this.pagination.pageSize
+                    }
+                )
+                this.{{ModelNamePlural}}Data = response.data.list
+                this.pagination.total = parseInt(response.data.pagination.total, 10)
+            },
+
+            add() {
+                this.$router.push({path: "add"})
+            },
+            edit(id) {
+                this.$router.push({path: "edit", query: {id}})
+            },
+            del(id) {
+                this.$confirm("是否删除?", "提示", {
+                    confirmButtonText: "确定",
+                    cancelButtonText: "取消",
+                    type: "warning"
+                })
+                    .then(() => {
+                        del{{ModelNameSingular|title}}(id).then((response) => {
+                            this.$message({
+                                type: "success",
+                                message: "删除成功!"
+                            })
+                            this.getList()
+                        })
+                    })
+                    .catch(() => {
+                        this.$message({
+                            type: "info",
+                            message: "已取消删除"
+                        })
+                    })
+            },
+            onSearch(sort) {
+                this.getList({...this.{{ModelNameSingular}}Form, ...sort})
+            },
+            sortBy(e) {
+                this.onSearch(e)
+            },
+            reset() {
+                this.{{ModelNameSingular}}Form = {}
+                this.getList()
+            }
+        }
+    }
+</script>
+
+<style lang='scss' scope>
+    .app-container {
+        padding: 20px;
+        .no-margin{
+            margin: 0;
+        }
+    }
+</style>
