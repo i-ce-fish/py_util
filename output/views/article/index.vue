@@ -84,11 +84,13 @@
                                 
                                 
                                 
-                                
+                                  labelName='catalog_name'  valueName='id'  
 
                                 />
                             </el-form-item>
                         </el-col>
+                        
+                        
                         
                         
 
@@ -138,7 +140,7 @@
                     
                 
                     
-                        <el-table-column prop="is_header" label="首页头条"
+                        <el-table-column prop="is_header" label="是否首页"
                                           sortable="is_header" 
                                           width="100px" 
                                            align='center'   >
@@ -153,7 +155,7 @@
                     
                 
                     
-                        <el-table-column prop="is_col_header" label="栏目显示"
+                        <el-table-column prop="is_col_header" label="是否头条"
                                           sortable="is_col_header" 
                                           width="100px" 
                                            align='center'   >
@@ -171,6 +173,17 @@
                         <el-table-column prop="catalog_id" label="栏目ID"
                                          
                                           width="100px" 
+                                           align='center'   >
+
+                        
+                        
+                        </el-table-column>
+                    
+                
+                    
+                        <el-table-column prop="intro" label="简介"
+                                         
+                                          width="300px" 
                                            align='center'   >
 
                         

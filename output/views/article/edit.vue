@@ -49,7 +49,7 @@
                     </el-col>
                     
                     <el-col :span="12">
-                        <el-form-item label="首页图:" prop="front_pic">
+                        <el-form-item label="封面图:" prop="front_pic">
 
                             
                             
@@ -87,7 +87,7 @@
                     </el-col>
                     
                     <el-col :span="12">
-                        <el-form-item label="首页头条:" prop="is_header">
+                        <el-form-item label="是否首页:" prop="is_header">
 
                             
                             
@@ -106,7 +106,7 @@
                     </el-col>
                     
                     <el-col :span="12">
-                        <el-form-item label="栏目显示:" prop="is_col_header">
+                        <el-form-item label="是否头条:" prop="is_col_header">
 
                             
                             
@@ -137,7 +137,26 @@
                             
                             
                             
+                              labelName='catalog_name'  valueName='id'  
+
+                            />
+                        </el-form-item>
+                    </el-col>
+                    
+                    <el-col :span="12">
+                        <el-form-item label="简介:" prop="intro">
+
                             
+                            
+                                <y-input
+                            
+                            v-model="articleForm.intro"
+                            
+                            
+                            
+                            
+                            
+                              type="textarea"  
 
                             />
                         </el-form-item>
@@ -161,6 +180,9 @@
     import { putArticle, getArticle } from "../../api/article"
 
 
+    
+    
+    
     
     
     
@@ -234,7 +256,7 @@
                 {
                     type: "string",
                         max:  255,
-                    message: "请输入长度小于255的首页图",
+                    message: "请输入长度小于255的封面图",
                         trigger: "blur"
                 },
                 
@@ -276,6 +298,29 @@
                 
                 
                 
+                
+                
+                intro:[
+
+                    
+                
+
+                
+                
+                
+                {
+                    type: "string",
+                        max:  255,
+                    message: "请输入长度小于255的简介",
+                        trigger: "blur"
+                },
+                
+
+                
+                
+            ],
+                
+                
             },
 
                 
@@ -302,6 +347,9 @@
                         catalog_idOptions:[],
                     
                 
+                    
+                        
+                
         }
         },
         created() {
@@ -318,12 +366,12 @@
                 this.$router.push({ path: "/article" })
 
                 this.$message({
-                    message: "添加成功",
+                    message: "修改成功",
                     type: "success"
                 })
             },
 
-            async submit(articleForm) {
+            async submit() {
                 this.$refs.articleForm.check((valid) => {
                     if (valid) {
                         this.putArticle()

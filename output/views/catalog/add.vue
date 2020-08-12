@@ -13,7 +13,14 @@
                     <el-col :span="12">
                         <el-form-item label="类别名:" prop="catalog_name">
 
-                            
+
+                          
+                          
+                          <el-tooltip  content="请输入图文分类名称 " placement="top-start">
+                          
+
+
+                          
                             
                             <y-input
                             
@@ -24,15 +31,25 @@
                                 
                                 
                                 
-
                             />
+
+                            
+                            
+                            </el-tooltip>
+                            
+
                         </el-form-item>
                     </el-col>
                     
                     <el-col :span="12">
                         <el-form-item label="介绍:" prop="description">
 
-                            
+
+                          
+                          
+
+
+                          
                             
                             <y-input
                             
@@ -43,28 +60,11 @@
                                 
                                 
                                 
-
                             />
-                        </el-form-item>
-                    </el-col>
-                    
-                    <el-col :span="12">
-                        <el-form-item label="父ID:" prop="parent_id">
 
                             
                             
-                            <y-select
-                            
-                                v-model="catalogForm.parent_id"
-                                
-                                 api="/api/catalogs?parent_id=0" 
-                                
-                                
-                                
-                                  labelName="catalog_name"
-    valueName="id"  
 
-                            />
                         </el-form-item>
                     </el-col>
                     
@@ -84,9 +84,6 @@
 <script>
     import { addCatalog } from "../../api/catalog"
 
-    
-    
-    
     
     
     
@@ -153,9 +150,6 @@
                         ],
                         
                     
-                        
-                        
-                    
                 },
 
                 
@@ -163,11 +157,6 @@
                     
                 
                     
-                    
-                
-                    
-                    
-                        parent_idOptions:[],
                     
                 
             }

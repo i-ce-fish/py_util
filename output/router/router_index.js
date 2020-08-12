@@ -1,1 +1,1 @@
-import categoryRouter from "./modules/category"
+import catalogRouter from "./modules/catalog"

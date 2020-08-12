@@ -13,7 +13,14 @@
                     <el-col :span="12">
                         <el-form-item label="{{Field.FieldNameCn}}:" prop="{{Field.FieldNameEn}}">
 
-                            {#  判断Field.FieldType是否布尔类型，直接显示为单选框  #}
+
+                          {#  判断有没有上方提示  #}
+                          {% if  Field.VueFormTips %}
+                          <el-tooltip  content="{{Field.VueFormTips}} " placement="top-start">
+                          {% endif %}
+
+
+                          {#  判断Field.FieldType是否布尔类型，直接显示为单选框  #}
                             {% if  Field.FieldType == 'Boolean'  %}
                             <y-radio
                             {% else %}
@@ -26,8 +33,13 @@
                                 {% if not Field.Editable  %}  disabled  {% endif %}
                                 {#  判断Field.VueComponentConfig 自定义配置 #}
                                 {% if Field.VueComponentConfig|trim|length != 0  %}  {{Field.VueComponentConfig}}  {% endif %}
-
                             />
+
+                            {#  判断有没有上方提示结束符  #}
+                            {% if  Field.VueFormTips %}
+                            </el-tooltip>
+                            {% endif %}
+
                         </el-form-item>
                     </el-col>
                     {% endfor %}

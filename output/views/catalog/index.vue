@@ -43,8 +43,6 @@
                         
                         
                         
-                        
-                        
 
                     </el-row>
                 </el-col>
@@ -81,17 +79,6 @@
                                          
                                          
                                           >
-
-                        
-                        
-                        </el-table-column>
-                    
-                
-                    
-                        <el-table-column prop="parent_id" label="父ID"
-                                         
-                                          width="100px" 
-                                           align='center'   >
 
                         
                         

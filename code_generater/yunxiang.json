@@ -1,6 +1,153 @@
 [
   {
     "ApiPath": "",
+    "Discription": "用于首页管理",
+    "Fields": [
+      {
+        "Autoincrement": false,
+        "CreateValidMsg": "",
+        "DbFieldName": "",
+        "DefaultValue": "",
+        "Description": "轮播图",
+        "EditValidMsg": "",
+        "Editable": true,
+        "FieldNameCn": "轮播图",
+        "FieldNameEn": "carousels",
+        "FieldType": "String(60)",
+        "IsFK": false,
+        "IsOutput": true,
+        "IsRequired": true,
+        "IsUnique": false,
+        "Onupdate": "",
+        "Orderable": false,
+        "OutputType": "String",
+        "ParameterDefault": "",
+        "ParameterType": "str",
+        "SearchCondition": "==",
+        "Searchable": false,
+        "SelectApi": "",
+        "ServerDefault": "",
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponent": "y-input",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      },
+      {
+        "Autoincrement": false,
+        "CreateValidMsg": "",
+        "DbFieldName": "",
+        "DefaultValue": "",
+        "Description": "",
+        "EditValidMsg": "",
+        "Editable": true,
+        "FieldNameCn": "颜色缩略图",
+        "FieldNameEn": "color_thumbnail",
+        "FieldType": "String(255)",
+        "IsFK": false,
+        "IsOutput": true,
+        "IsRequired": false,
+        "IsUnique": false,
+        "Onupdate": "",
+        "Orderable": false,
+        "OutputType": "String",
+        "ParameterDefault": "",
+        "ParameterType": "str",
+        "SearchCondition": "==",
+        "Searchable": false,
+        "SelectApi": "",
+        "ServerDefault": "",
+        "VueShowinList": false,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponent": "y-input",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      },
+      {
+        "Autoincrement": false,
+        "CreateValidMsg": "",
+        "DbFieldName": "",
+        "DefaultValue": "",
+        "Description": "",
+        "EditValidMsg": "",
+        "Editable": true,
+        "FieldNameCn": "图片缩略图",
+        "FieldNameEn": "product_thumbnail",
+        "FieldType": "String(255)",
+        "IsFK": false,
+        "IsOutput": true,
+        "IsRequired": false,
+        "IsUnique": false,
+        "Onupdate": "",
+        "Orderable": false,
+        "OutputType": "String",
+        "ParameterDefault": "",
+        "ParameterType": "str",
+        "SearchCondition": "==",
+        "Searchable": false,
+        "SelectApi": "",
+        "ServerDefault": "",
+        "VueShowinList": false,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponent": "y-input",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      },
+      {
+        "Autoincrement": false,
+        "CreateValidMsg": "",
+        "DbFieldName": "",
+        "DefaultValue": "",
+        "Description": "",
+        "EditValidMsg": "",
+        "Editable": true,
+        "FieldNameCn": "GoodId",
+        "FieldNameEn": "good_id",
+        "FieldType": "Integer",
+        "IsFK": false,
+        "IsOutput": true,
+        "IsRequired": false,
+        "IsUnique": false,
+        "Onupdate": "",
+        "Orderable": false,
+        "OutputType": "Integer",
+        "ParameterDefault": "",
+        "ParameterType": "int",
+        "SearchCondition": "==",
+        "Searchable": false,
+        "SelectApi": "",
+        "ServerDefault": "",
+        "VueShowinList": true,
+        "VueListWidth": "100px",
+        "VueListConfig": "align='center' ",
+        "VueComponent": "y-select",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      }
+    ],
+    "HasCreate": true,
+    "HasDelete": true,
+    "HasDetail": true,
+    "HasEdit": true,
+    "HasList": true,
+    "ModelNamePlural": "homes",
+    "ModelNameSingular": "home",
+    "ModuleNameCn": "首页",
+    "TableName": "home"
+  },
+  {
+    "ApiPath": "",
     "Discription": "发布站内各类内容",
     "Fields": [
       {
@@ -32,7 +179,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -63,17 +212,19 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
         "CreateValidMsg": "",
         "DbFieldName": "",
         "DefaultValue": "",
-        "Description": "首页缩略图",
+        "Description": "封面图",
         "EditValidMsg": "",
         "Editable": true,
-        "FieldNameCn": "首页图",
+        "FieldNameCn": "封面图",
         "FieldNameEn": "front_pic",
         "FieldType": "String(255)",
         "IsFK": false,
@@ -94,7 +245,9 @@
         "VueListConfig": "",
         "VueComponent": "y-upload-single",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -125,17 +278,19 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
         "CreateValidMsg": "",
         "DbFieldName": "",
         "DefaultValue": "",
-        "Description": "是否作为头条显示在首页上",
+        "Description": "是否作为显示在老娘说页面上",
         "EditValidMsg": "",
         "Editable": true,
-        "FieldNameCn": "首页头条",
+        "FieldNameCn": "是否首页",
         "FieldNameEn": "is_header",
         "FieldType": "Boolean",
         "IsFK": false,
@@ -156,17 +311,19 @@
         "VueListConfig": "align='center'",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
         "CreateValidMsg": "",
         "DbFieldName": "",
         "DefaultValue": "",
-        "Description": "是否显示到栏目的头条",
+        "Description": "是否作为该栏目头条,每个栏目只能有一个头条",
         "EditValidMsg": "",
         "Editable": true,
-        "FieldNameCn": "栏目显示",
+        "FieldNameCn": "是否头条",
         "FieldNameEn": "is_col_header",
         "FieldType": "Boolean",
         "IsFK": false,
@@ -187,7 +344,9 @@
         "VueListConfig": "align='center'",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -218,7 +377,42 @@
         "VueListConfig": "align='center'",
         "VueComponent": "y-select",
         "VueComponentConfig": "labelName='catalog_name'  valueName='id'",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      },
+      {
+        "Autoincrement": false,
+        "CreateValidMsg": "",
+        "DbFieldName": "",
+        "DefaultValue": "",
+        "Description": "文章简介",
+        "EditValidMsg": "",
+        "Editable": true,
+        "FieldNameCn": "简介",
+        "FieldNameEn": "intro",
+        "FieldType": "String(255)",
+        "IsFK": false,
+        "IsOutput": true,
+        "IsRequired": false,
+        "IsUnique": false,
+        "Onupdate": "",
+        "Orderable": false,
+        "OutputType": "String",
+        "ParameterDefault": "",
+        "ParameterType": "str",
+        "SearchCondition": null,
+        "Searchable": false,
+        "SelectApi": "",
+        "ServerDefault": "",
+        "VueShowinList": true,
+        "VueListWidth": "300px",
+        "VueListConfig": "align='center'",
+        "VueComponent": "y-input",
+        "VueComponentConfig": "type=\"textarea\"",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       }
     ],
     "HasCreate": true,
@@ -264,7 +458,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "请输入图文分类名称",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -295,38 +491,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
-      },
-      {
-        "Autoincrement": false,
-        "CreateValidMsg": "父ID必须时数字",
-        "DbFieldName": "",
-        "DefaultValue": "0",
-        "Description": "",
-        "EditValidMsg": "父ID必须时数字",
-        "Editable": true,
-        "FieldNameCn": "父ID",
-        "FieldNameEn": "parent_id",
-        "FieldType": "Integer",
-        "IsFK": false,
-        "IsOutput": true,
-        "IsRequired": false,
-        "IsUnique": false,
-        "Onupdate": "",
-        "Orderable": false,
-        "OutputType": "Integer",
-        "ParameterDefault": "",
-        "ParameterType": "int",
-        "SearchCondition": "",
-        "Searchable": false,
-        "SelectApi": "/api/catalogs?parent_id=0",
-        "ServerDefault": "",
-        "VueShowinList": true,
-        "VueListWidth": "100px",
-        "VueListConfig": "align='center'",
-        "VueComponent": "y-select",
-        "VueComponentConfig": "labelName=\"catalog_name\"\n    valueName=\"id\"",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       }
     ],
     "HasCreate": true,
@@ -372,8 +539,11 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
-      } ,{
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      },
+      {
         "Autoincrement": false,
         "CreateValidMsg": "排序",
         "DbFieldName": "",
@@ -401,7 +571,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -432,7 +604,9 @@
         "VueListConfig": "align='center'",
         "VueComponent": "y-select",
         "VueComponentConfig": "labelName=\"catalog_name\"\n    valueName=\"id\"",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       }
     ],
     "HasCreate": true,
@@ -478,7 +652,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -509,7 +685,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -540,7 +718,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -571,7 +751,9 @@
         "VueListConfig": "",
         "VueComponent": "y-select",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -602,7 +784,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       }
     ],
     "HasCreate": true,
@@ -648,7 +832,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -679,7 +865,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -710,7 +898,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -741,7 +931,9 @@
         "VueListConfig": "",
         "VueComponent": "y-select",
         "VueComponentConfig": ":options=\"[{value: '1',label: '男'},{value: '0',label: '女'}]\"",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -772,7 +964,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -803,7 +997,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -834,7 +1030,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -865,7 +1063,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -896,7 +1096,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -927,7 +1129,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -958,7 +1162,9 @@
         "VueListConfig": "",
         "VueComponent": "y-upload-multiple",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -989,7 +1195,9 @@
         "VueListConfig": "",
         "VueComponent": "y-upload-single",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1020,7 +1228,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1051,7 +1261,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       }
     ],
     "HasCreate": true,
@@ -1097,7 +1309,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1128,7 +1342,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1159,7 +1375,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1190,7 +1408,9 @@
         "VueListConfig": "align='center'",
         "VueComponent": "y-select",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1221,7 +1441,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1252,7 +1474,9 @@
         "VueListConfig": "align='center'",
         "VueComponent": "y-select",
         "VueComponentConfig": "valueName='id' labelName='product_name'",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       }
     ],
     "HasCreate": true,
@@ -1298,7 +1522,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1329,7 +1555,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1360,7 +1588,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1391,7 +1621,9 @@
         "VueListConfig": "align='center' ",
         "VueComponent": "y-select",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       }
     ],
     "HasCreate": true,
@@ -1437,7 +1669,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1468,7 +1702,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1499,7 +1735,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1530,7 +1768,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1561,7 +1801,9 @@
         "VueListConfig": "",
         "VueComponent": "y-radio",
         "VueComponentConfig": ":options=\"[{value: '1',label: '是'},{value: '0',label: '否'}]\"",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       }
     ],
     "HasCreate": true,
@@ -1607,7 +1849,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1638,7 +1882,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       }
     ],
     "HasCreate": true,
@@ -1684,7 +1930,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1715,7 +1963,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1746,7 +1996,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       },
       {
         "Autoincrement": false,
@@ -1777,7 +2029,9 @@
         "VueListConfig": "",
         "VueComponent": "y-input",
         "VueComponentConfig": "",
-        "VueRegx": ""
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
       }
     ],
     "HasCreate": true,
