@@ -1,27 +1,24 @@
 <template>
     <div class="app-container">
+      <el-card>
+        <div slot="header">
+          <span>搜索条件</span>
+        </div>
         <y-form
                 ref="{{ModelNameSingular}}Form"
                 :model="{{ModelNameSingular}}Form"
                 label-width="80px"
         >
-            <el-row type="flex" justify="end">
-                <el-form-item>
-                    <el-button type="success" @click="add">添加{{ModuleNameCn}}</el-button>
-                </el-form-item>
-            </el-row>
 
-
-            {#  判断是否含有可搜索条件，显示搜索表单与按钮#}
+            {#  没有搜索条件的情况未考虑#}
             {% for Field in Fields%}
             {% if Field.Searchable %}
             <el-row type="flex" justify="space-between">
-                <el-col :span="20">
                     <el-row>
 
                         {% for Field in Fields%}
                         {% if Field.Searchable %}
-                        <el-col :span="6">
+                        <el-col >
                             <el-form-item label="{{Field.FieldNameCn}}:" prop="{{Field.FieldNameEn}}">
 
                                 {#  判断Field.FieldType是否布尔类型，直接显示为单选框  #}
@@ -38,6 +35,11 @@
                                 {#  判断Field.VueComponentConfig 自定义配置 #}
                                 {% if Field.VueComponentConfig|trim|length != 0  %}  {{Field.VueComponentConfig}}  {% endif %}
 
+                                {#  判断有没有上方提示  #}
+                                {% if  Field.VueFormTips %}
+                                tips="{{Field.VueFormTips}}"
+                                {% endif %}
+
                                 />
                             </el-form-item>
                         </el-col>
@@ -45,22 +47,22 @@
                         {% endfor %}
 
                     </el-row>
-                </el-col>
-                <el-col :span="4">
-                    <el-row type="flex" justify="end">
-                        <el-form-item>
-                            <el-button type="primary" @click="onSearch">查询</el-button>
-                            <el-button @click="reset" class="no-margin">重置</el-button>
-                        </el-form-item>
-                    </el-row>
-                </el-col>
+
             </el-row>
             {% break %}
             {% endif %}
             {% endfor %}
 
-        </y-form>
+          <el-row type="flex" align="space-between">
+            <el-col>
+                <el-button type="primary" @click="onSearch">查询</el-button>
+                <el-button @click="reset" class="no-margin">重置</el-button>
+            </el-col>
+            <el-button type="success" @click="add">添加{{ModuleNameCn}}</el-button>
 
+          </el-row>
+        </y-form>
+      </el-card>
         <y-table :data="{{ModelNamePlural}}Data" :pagination="pagination" @sortBy="sortBy" @changePage4List="getList">
             <template>
 

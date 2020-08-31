@@ -1433,7 +1433,7 @@
         "ParameterDefault": "",
         "ParameterType": "int",
         "SearchCondition": "==",
-        "Searchable": false,
+        "Searchable": true,
         "SelectApi": "",
         "ServerDefault": "",
         "VueShowinList": true,
