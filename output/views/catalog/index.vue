@@ -1,27 +1,24 @@
 <template>
     <div class="app-container">
+      <el-card>
+        <div slot="header">
+          <span>搜索条件</span>
+        </div>
         <y-form
                 ref="catalogForm"
                 :model="catalogForm"
                 label-width="80px"
         >
-            <el-row type="flex" justify="end">
-                <el-form-item>
-                    <el-button type="success" @click="add">添加图文分类</el-button>
-                </el-form-item>
-            </el-row>
-
 
             
             
             
             <el-row type="flex" justify="space-between">
-                <el-col :span="20">
                     <el-row>
 
                         
                         
-                        <el-col :span="6">
+                        <el-col >
                             <el-form-item label="类别名:" prop="catalog_name">
 
                                 
@@ -36,6 +33,11 @@
                                 
                                 
 
+                                
+                                
+                                tips="请输入图文分类名称"
+                                
+
                                 />
                             </el-form-item>
                         </el-col>
@@ -45,20 +47,20 @@
                         
 
                     </el-row>
-                </el-col>
-                <el-col :span="4">
-                    <el-row type="flex" justify="end">
-                        <el-form-item>
-                            <el-button type="primary" @click="onSearch">查询</el-button>
-                            <el-button @click="reset" class="no-margin">重置</el-button>
-                        </el-form-item>
-                    </el-row>
-                </el-col>
+
             </el-row>
             
 
-        </y-form>
+          <el-row type="flex" align="space-between">
+            <el-col>
+                <el-button type="primary" @click="onSearch">查询</el-button>
+                <el-button @click="reset" class="no-margin">重置</el-button>
+            </el-col>
+            <el-button type="success" @click="add">添加图文分类</el-button>
 
+          </el-row>
+        </y-form>
+      </el-card>
         <y-table :data="catalogsData" :pagination="pagination" @sortBy="sortBy" @changePage4List="getList">
             <template>
 

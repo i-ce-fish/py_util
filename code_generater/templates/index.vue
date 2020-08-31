@@ -13,12 +13,11 @@
             {#  没有搜索条件的情况未考虑#}
             {% for Field in Fields%}
             {% if Field.Searchable %}
-            <el-row type="flex" justify="space-between">
                     <el-row>
 
                         {% for Field in Fields%}
                         {% if Field.Searchable %}
-                        <el-col >
+                        <el-col :span="6">
                             <el-form-item label="{{Field.FieldNameCn}}:" prop="{{Field.FieldNameEn}}">
 
                                 {#  判断Field.FieldType是否布尔类型，直接显示为单选框  #}
@@ -48,7 +47,6 @@
 
                     </el-row>
 
-            </el-row>
             {% break %}
             {% endif %}
             {% endfor %}
@@ -56,14 +54,19 @@
           <el-row type="flex" align="space-between">
             <el-col>
                 <el-button type="primary" @click="onSearch">查询</el-button>
-                <el-button @click="reset" class="no-margin">重置</el-button>
+                <el-button @click="reset" class="y-mr-l-10">重置</el-button>
             </el-col>
             <el-button type="success" @click="add">添加{{ModuleNameCn}}</el-button>
 
           </el-row>
         </y-form>
       </el-card>
-        <y-table :data="{{ModelNamePlural}}Data" :pagination="pagination" @sortBy="sortBy" @changePage4List="getList">
+        <y-table
+            :data="{{ModelNamePlural}}Data"
+            :pagination="pagination"
+            @sortBy="sortBy"
+            @changePage4List="getList"
+        >
             <template>
 
                 {% for Field in Fields %}

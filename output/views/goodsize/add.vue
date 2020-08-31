@@ -13,7 +13,11 @@
                     <el-col :span="12">
                         <el-form-item label="尺码名:" prop="size_name">
 
-                            
+
+
+
+
+                          
                             
                             <y-input
                             
@@ -24,15 +28,23 @@
                                 
                                 
                                 
-
+                                
+                                
                             />
+
+
+
                         </el-form-item>
                     </el-col>
                     
                     <el-col :span="12">
                         <el-form-item label="尺寸显示名:" prop="display_name">
 
-                            
+
+
+
+
+                          
                             
                             <y-input
                             
@@ -43,15 +55,23 @@
                                 
                                 
                                 
-
+                                
+                                
                             />
+
+
+
                         </el-form-item>
                     </el-col>
                     
                     <el-col :span="12">
                         <el-form-item label="尺寸解释:" prop="description">
 
-                            
+
+
+
+
+                          
                             
                             <y-input
                             
@@ -62,34 +82,50 @@
                                 
                                 
                                 
-
+                                
+                                
                             />
+
+
+
                         </el-form-item>
                     </el-col>
                     
                     <el-col :span="12">
                         <el-form-item label="ColorID:" prop="color_id">
 
-                            
+
+
+
+
+                          
                             
                             <y-select
                             
                                 v-model="goodsizeForm.color_id"
                                 
-                                 api="/api/todo" 
                                 
                                 
                                 
                                 
-
+                                
+                                
+                                
                             />
+
+
+
                         </el-form-item>
                     </el-col>
                     
                     <el-col :span="12">
                         <el-form-item label="库存数量:" prop="inventory">
 
-                            
+
+
+
+
+                          
                             
                             <y-input
                             
@@ -100,27 +136,39 @@
                                 
                                 
                                 
-
+                                
+                                
                             />
+
+
+
                         </el-form-item>
                     </el-col>
                     
                     <el-col :span="12">
                         <el-form-item label="货品ID:" prop="good_id">
 
-                            
+
+
+
+
+                          
                             
                             <y-select
                             
                                 v-model="goodsizeForm.good_id"
                                 
+                                 api="/api/goods" 
                                 
                                 
                                 
+                                  valueName='id' labelName='product_name'  
                                 
                                 
-
                             />
+
+
+
                         </el-form-item>
                     </el-col>
                     
@@ -260,13 +308,13 @@
                 
                     
                     
-                        color_idOptions:[],
-                    
                 
                     
                     
                 
                     
+                    
+                        good_idOptions:[],
                     
                 
             }
@@ -291,7 +339,6 @@
                     } else {
                         return false
                     }
-                    return undefined
                 })
             }
         }

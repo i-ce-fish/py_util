@@ -53,7 +53,7 @@
 
 <script>
 
-    import { put{{ModelNameSingular|title}}, get{{ModelNameSingular|title}} } from "../../api/{{ModelNameSingular}}"
+    import { put{{ModelNameSingular|title}}, get{{ModelNameSingular|title}} } from "@/api/{{ModelNameSingular}}"
 
 
     {% for Field in Fields%}
@@ -133,8 +133,6 @@
                 this.$refs.{{ModelNameSingular}}Form.check((valid) => {
                     if (valid) {
                         this.put{{ModelNameSingular|title}}()
-                    } else {
-                        return false
                     }
                 })
             }

@@ -1,1 +1,1 @@
-import catalogRouter from "./modules/catalog"
+import colorRouter from "./modules/color"

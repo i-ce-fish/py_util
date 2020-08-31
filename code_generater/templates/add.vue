@@ -55,7 +55,7 @@
 </template>
 
 <script>
-    import { add{{ModelNameSingular|title}} } from "../../api/{{ModelNameSingular}}"
+    import { add{{ModelNameSingular|title}} } from "@/api/{{ModelNameSingular}}"
 
     {% for Field in Fields%}
     {#  判断是否有校验  #}
@@ -129,8 +129,6 @@
                 this.$refs.{{ModelNameSingular}}Form.check((valid) => {
                     if (valid) {
                         this.add{{ModelNameSingular|title}}()
-                    } else {
-                        return false
                     }
                 })
             }

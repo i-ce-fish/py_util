@@ -1,34 +1,80 @@
 <template>
     <div class="app-container">
+      <el-card>
+        <div slot="header">
+          <span>搜索条件</span>
+        </div>
         <y-form
                 ref="goodsizeForm"
                 :model="goodsizeForm"
                 label-width="80px"
         >
-            <el-row type="flex" justify="end">
-                <el-form-item>
-                    <el-button type="success" @click="add">添加尺码表</el-button>
-                </el-form-item>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <el-row type="flex" justify="space-between">
+                    <el-row>
+
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <el-col >
+                            <el-form-item label="库存数量:" prop="inventory">
+
+                                
+                                
+                                <y-input
+                                
+                                v-model="goodsizeForm.inventory"
+                                
+                                
+                                
+                                
+                                
+                                
+
+                                
+                                
+
+                                />
+                            </el-form-item>
+                        </el-col>
+                        
+                        
+                        
+                        
+
+                    </el-row>
+
             </el-row>
-
-
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
 
+          <el-row type="flex" align="space-between">
+            <el-col>
+                <el-button type="primary" @click="onSearch">查询</el-button>
+                <el-button @click="reset" class="no-margin">重置</el-button>
+            </el-col>
+            <el-button type="success" @click="add">添加尺码表</el-button>
+
+          </el-row>
         </y-form>
-
+      </el-card>
         <y-table :data="goodsizesData" :pagination="pagination" @sortBy="sortBy" @changePage4List="getList">
             <template>
 

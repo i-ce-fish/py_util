@@ -13,10 +13,7 @@
                     <el-col :span="12">
                         <el-form-item label="类别名:" prop="catalog_name">
 
-                          
-                          
-                          <el-tooltip  content="请输入图文分类名称 " placement="top-start">
-                            
+
 
                             
                             
@@ -29,21 +26,20 @@
                             
                             
                             
-
+                            
+                            
+                            tips="请输入图文分类名称"
+                            
                             />
 
-                            
-                            
-                          </el-tooltip>
-                          
+
                         </el-form-item>
                     </el-col>
                     
                     <el-col :span="12">
                         <el-form-item label="介绍:" prop="description">
 
-                          
-                          
+
 
                             
                             
@@ -56,11 +52,11 @@
                             
                             
                             
-
+                            
+                            
                             />
 
-                            
-                            
+
                         </el-form-item>
                     </el-col>
                     
