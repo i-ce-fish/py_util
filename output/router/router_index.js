@@ -1,1 +1,1 @@
-import colorRouter from "./modules/color"
+import goodbrandRouter from "./modules/goodbrand"

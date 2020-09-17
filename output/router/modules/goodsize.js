@@ -9,18 +9,18 @@ const goodsizeRouter = {
         path: "index",
         name: "index",
         component: () => import("@/views/goodsize/index"),
-        meta: { title: "尺码表管理", icon: "tree" }
+        meta: { title: "商品尺码管理", icon: "tree" }
     }, {
         path: "edit",
         component: () => import("@/views/goodsize/edit"),
         hidden: true,
-        meta: { title: "修改尺码表" }
+        meta: { title: "修改商品尺码" }
     },
     {
         path: "add",
         component: () => import("@/views/goodsize/add"),
         hidden: true,
-        meta: { title: "添加尺码表" }
+        meta: { title: "添加商品尺码" }
     }
     ]
 }

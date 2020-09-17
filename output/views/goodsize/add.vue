@@ -1,7 +1,7 @@
 <template>
     <div class="card-container">
         <el-card class="box-card">
-            <h3>添加goodsize</h3>
+            <h3>添加商品尺码</h3>
             <y-form
                     ref="goodsizeForm"
                     :model="goodsizeForm"
@@ -22,6 +22,11 @@
                             <y-input
                             
                                 v-model="goodsizeForm.size_name"
+                                
+                                
+                                placeholder="XS"
+                                
+
                                 
                                 
                                 
@@ -51,6 +56,11 @@
                                 v-model="goodsizeForm.display_name"
                                 
                                 
+                                placeholder="160/84A/XS"
+                                
+
+                                
+                                
                                 
                                 
                                 
@@ -78,31 +88,9 @@
                                 v-model="goodsizeForm.description"
                                 
                                 
+                                placeholder="肩宽：50.5   身宽：52    后肩衣长72   连肩袖长：79.5"
                                 
-                                
-                                
-                                
-                                
-                                
-                            />
 
-
-
-                        </el-form-item>
-                    </el-col>
-                    
-                    <el-col :span="12">
-                        <el-form-item label="ColorID:" prop="color_id">
-
-
-
-
-
-                          
-                            
-                            <y-select
-                            
-                                v-model="goodsizeForm.color_id"
                                 
                                 
                                 
@@ -132,6 +120,11 @@
                                 v-model="goodsizeForm.inventory"
                                 
                                 
+                                placeholder="10"
+                                
+
+                                
+                                
                                 
                                 
                                 
@@ -146,7 +139,7 @@
                     </el-col>
                     
                     <el-col :span="12">
-                        <el-form-item label="货品ID:" prop="good_id">
+                        <el-form-item label="尺码类别:" prop="size_type">
 
 
 
@@ -156,13 +149,16 @@
                             
                             <y-select
                             
-                                v-model="goodsizeForm.good_id"
-                                
-                                 api="/api/goods" 
+                                v-model="goodsizeForm.size_type"
                                 
                                 
+
                                 
-                                  valueName='id' labelName='product_name'  
+                                
+                                
+                                
+                                
+                                
                                 
                                 
                             />
@@ -173,11 +169,13 @@
                     </el-col>
                     
 
-                    <el-col :span="24">
+                    <el-col>
+                      <el-row type="flex" justify="end">
                         <el-form-item>
-                            <el-button @click="submit('goodsizeForm')">提交</el-button>
-                            <el-button @click="back">返回</el-button>
-                        </el-form-item>
+                              <el-button @click="submit('goodsizeForm')">提交</el-button>
+                              <el-button @click="back">返回</el-button>
+                          </el-form-item>
+                      </el-row>
                     </el-col>
                 </el-row>
             </y-form>
@@ -186,7 +184,7 @@
 </template>
 
 <script>
-    import { addGoodsize } from "../../api/goodsize"
+    import { addGoodsize } from "@/api/goodsize"
 
     
     
@@ -200,12 +198,7 @@
     
     
     
-    
-    
-    
-    
-    
-    
+        import { regular } from "../../utils/validate"
     
 
 
@@ -228,8 +221,8 @@
                                     
                                     {
                                         type: "string",
-                                        max:  60,
-                                        message: "请输入长度小于60的尺码名",
+                                        max:  255,
+                                        message: "请输入长度小于255的尺码名",
                                         trigger: "blur"
                                     },
                             
@@ -287,11 +280,42 @@
                     
                         
                         
+                        inventory:[
+
+                            
+                            
+
+                            
+                            
+
+                            
+                            
+                                {type:'number',message:'请输入正确的数字'},
+                            
+                        ],
+                        
                     
                         
                         
-                    
-                        
+                        size_type:[
+
+                            
+                            
+
+                            
+                            
+                                    
+                                    {
+                                        type: "string",
+                                        max:  69,
+                                        message: "请输入长度小于69的尺码类别",
+                                        trigger: "blur"
+                                    },
+                            
+
+                            
+                            
+                        ],
                         
                     
                 },
@@ -310,11 +334,6 @@
                     
                 
                     
-                    
-                
-                    
-                    
-                        good_idOptions:[],
                     
                 
             }
@@ -336,8 +355,6 @@
                 this.$refs.goodsizeForm.check((valid) => {
                     if (valid) {
                         this.addGoodsize()
-                    } else {
-                        return false
                     }
                 })
             }

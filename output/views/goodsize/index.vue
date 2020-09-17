@@ -19,9 +19,6 @@
             
             
             
-            
-            
-            <el-row type="flex" justify="space-between">
                     <el-row>
 
                         
@@ -32,9 +29,7 @@
                         
                         
                         
-                        
-                        
-                        <el-col >
+                        <el-col :span="6">
                             <el-form-item label="库存数量:" prop="inventory">
 
                                 
@@ -62,25 +57,58 @@
 
                     </el-row>
 
-            </el-row>
             
 
           <el-row type="flex" align="space-between">
             <el-col>
                 <el-button type="primary" @click="onSearch">查询</el-button>
-                <el-button @click="reset" class="no-margin">重置</el-button>
+                <el-button @click="reset" class="y-mr-l-10">重置</el-button>
             </el-col>
-            <el-button type="success" @click="add">添加尺码表</el-button>
+            <el-button type="success" @click="add">添加商品尺码</el-button>
 
           </el-row>
         </y-form>
       </el-card>
-        <y-table :data="goodsizesData" :pagination="pagination" @sortBy="sortBy" @changePage4List="getList">
+        <y-table
+            :data="goodsizesData"
+            :pagination="pagination"
+            @sortBy="sortBy"
+            @changePage4List="getList"
+            class="y-p-t-20"
+        >
             <template>
 
                 
                     
-                        <el-table-column prop="size_name" label="尺码名"
+                        <el-table-column prop="size_name"
+                                         label="尺码名"
+                                         align="center"
+                                         
+                                          width="200px" 
+                                          >
+
+                        
+                        
+                        </el-table-column>
+                    
+                
+                    
+                        <el-table-column prop="display_name"
+                                         label="尺寸显示名"
+                                         align="center"
+                                         
+                                          width="250px" 
+                                          >
+
+                        
+                        
+                        </el-table-column>
+                    
+                
+                    
+                        <el-table-column prop="description"
+                                         label="尺寸解释"
+                                         align="center"
                                          
                                          
                                           >
@@ -91,9 +119,11 @@
                     
                 
                     
-                        <el-table-column prop="display_name" label="尺寸显示名"
+                        <el-table-column prop="inventory"
+                                         label="库存数量"
+                                         align="center"
                                          
-                                         
+                                          width="120px" 
                                           >
 
                         
@@ -102,43 +132,12 @@
                     
                 
                     
-                        <el-table-column prop="description" label="尺寸解释"
+                        <el-table-column prop="size_type"
+                                         label="尺码类别"
+                                         align="center"
                                          
-                                         
+                                          width="120px" 
                                           >
-
-                        
-                        
-                        </el-table-column>
-                    
-                
-                    
-                        <el-table-column prop="color_id" label="ColorID"
-                                         
-                                          width="100px" 
-                                           align='center'   >
-
-                        
-                        
-                        </el-table-column>
-                    
-                
-                    
-                        <el-table-column prop="inventory" label="库存数量"
-                                         
-                                         
-                                          >
-
-                        
-                        
-                        </el-table-column>
-                    
-                
-                    
-                        <el-table-column prop="good_id" label="货品ID"
-                                         
-                                          width="100px" 
-                                           align='center'   >
 
                         
                         
