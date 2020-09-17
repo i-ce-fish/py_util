@@ -66,12 +66,15 @@
             :pagination="pagination"
             @sortBy="sortBy"
             @changePage4List="getList"
+            class="y-p-t-20"
         >
             <template>
 
                 {% for Field in Fields %}
                     {% if Field.VueShowinList %}
-                        <el-table-column prop="{{Field.FieldNameEn}}" label="{{Field.FieldNameCn}}"
+                        <el-table-column prop="{{Field.FieldNameEn}}"
+                                         label="{{Field.FieldNameCn}}"
+                                         align="center"
                                          {% if Field.Orderable %} sortable="{{Field.FieldNameEn}}" {% endif %}
                                          {% if Field.VueListWidth|trim|length != 0 %} width="{{Field.VueListWidth}}" {% endif %}
                                          {% if Field.VueListConfig|trim|length != 0 %}  {{Field.VueListConfig}}  {% endif %} >
@@ -88,7 +91,7 @@
 
 
 
-                <el-table-column label="操作" width="100px">
+                <el-table-column label="操作" width="100px"  align="center">
                     <template slot-scope="{row}">
                         <el-button type="text" size="small" @click="edit(row.id)">修改</el-button>
                         <el-button type="text" size="small" @click="del(row.id)">删除</el-button>

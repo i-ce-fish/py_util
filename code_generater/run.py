@@ -62,21 +62,22 @@ model = find_in_list(data_list, 'ModelNameSingular',model_name)
 model_dict = {}
 # 替换model 里的 数据库字段
 # 2. 定义模板中替换变量 变量名为 xxxx的话  方法就是 generate_xxxx
-model_dict['output_fields'] = generate_output_fields(model['Fields'])
+# 后端代码
+# model_dict['output_fields'] = generate_output_fields(model['Fields'])
 
-model_dict['db_fields'] = generate_model_db_fields(model['Fields'])
+# model_dict['db_fields'] = generate_model_db_fields(model['Fields'])
 
-model_dict['post_parser_fields'] = generate_post_parser_fields(model['Fields'])
+# model_dict['post_parser_fields'] = generate_post_parser_fields(model['Fields'])
 
-model_dict['update_parser_fields'] = generate_update_parser_fields(model['Fields'])
+# model_dict['update_parser_fields'] = generate_update_parser_fields(model['Fields'])
 
-model_dict['query_parser_fields'] = generate_query_parser_fields(model['Fields'])
+# model_dict['query_parser_fields'] = generate_query_parser_fields(model['Fields'])
 
-model_dict['conditisons'] = generate_conditisons(model['Fields'])
+# model_dict['conditisons'] = generate_conditisons(model['Fields'])
 
-model_dict['update_all_fields_method'] = generate_update_all_fields_method(model['Fields'])
-model_dict['sortable_fields'] =generate_sortable_fields(model['Fields'])
-routers_str = generate_routers(data_list)
+# model_dict['update_all_fields_method'] = generate_update_all_fields_method(model['Fields'])
+# model_dict['sortable_fields'] =generate_sortable_fields(model['Fields'])
+# routers_str = generate_routers(data_list)
 
 
 # vue

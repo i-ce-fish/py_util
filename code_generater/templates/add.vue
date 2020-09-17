@@ -1,7 +1,7 @@
 <template>
     <div class="card-container">
         <el-card class="box-card">
-            <h3>添加{{ModelNameSingular}}</h3>
+            <h3>添加{{ModuleNameCn}}</h3>
             <y-form
                     ref="{{ModelNameSingular}}Form"
                     :model="{{ModelNameSingular}}Form"
@@ -24,6 +24,11 @@
                             <{{ Field.VueComponent }}
                             {% endif %}
                                 v-model="{{ModelNameSingular}}Form.{{Field.FieldNameEn}}"
+                                {# 提示符#}
+                                {% if  Field.VueFormPlaceholder %}
+                                placeholder="{{Field.VueFormPlaceholder}}"
+                                {% endif %}
+
                                 {#  判断Field.SelectAPi长度不为0就添加api属性  #}
                                 {% if Field.SelectApi|trim|length != 0  %} api="{{Field.SelectApi}}" {% endif %}
                                 {#  判断Field.Editable 是否可编辑 #}
@@ -42,11 +47,13 @@
                     </el-col>
                     {% endfor %}
 
-                    <el-col :span="24">
+                    <el-col>
+                      <el-row type="flex" justify="end">
                         <el-form-item>
-                            <el-button @click="submit('{{ModelNameSingular}}Form')">提交</el-button>
-                            <el-button @click="back">返回</el-button>
-                        </el-form-item>
+                              <el-button @click="submit('{{ModelNameSingular}}Form')">提交</el-button>
+                              <el-button @click="back">返回</el-button>
+                          </el-form-item>
+                      </el-row>
                     </el-col>
                 </el-row>
             </y-form>
