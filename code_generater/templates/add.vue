@@ -98,7 +98,7 @@
                                         type: "string",
                                         max:  {{Field.FieldType|replace('String','')|replace('(','')|replace(')','')}},
                                         message: "请输入长度小于{{Field.FieldType|replace('String','')|replace('(','')|replace(')','')}}的{{Field.FieldNameCn}}",
-                                        trigger: "blur"
+                                        trigger: "change"
                                     },
                             {% endif %}
 
