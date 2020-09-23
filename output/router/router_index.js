@@ -1,1 +1,1 @@
-import goodbrandRouter from "./modules/goodbrand"
+import testRouter from "./modules/test"

@@ -11,7 +11,13 @@
                 <el-row>
                     {% for Field in Fields%}
                     <el-col :span="12">
-                        <el-form-item label="{{Field.FieldNameCn}}:" prop="{{Field.FieldNameEn}}">
+                        <el-form-item
+                            label="{{Field.FieldNameCn}}:" prop="{{Field.FieldNameEn}}"
+                            {# 表单域标签的宽度#}
+                            {% if  Field.FormLabelWidth %}
+                            label-width="{{Field.FormLabelWidth}}"
+                            {% endif %}
+                        >
 
 
 
@@ -29,7 +35,10 @@
                                 placeholder="{{Field.VueFormPlaceholder}}"
                                 {% endif %}
 
-                                {#  判断Field.SelectAPi长度不为0就添加api属性  #}
+
+
+
+                          {#  判断Field.SelectAPi长度不为0就添加api属性  #}
                                 {% if Field.SelectApi|trim|length != 0  %} api="{{Field.SelectApi}}" {% endif %}
                                 {#  判断Field.Editable 是否可编辑 #}
                                 {% if not Field.Editable  %}  disabled  {% endif %}

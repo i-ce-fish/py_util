@@ -101,36 +101,6 @@
                     </el-col>
                     
                     <el-col :span="12">
-                        <el-form-item label="库存数量:" prop="inventory">
-
-
-
-                            
-                            
-                                <y-input
-                            
-                            v-model="goodsizeForm.inventory"
-
-                          
-                          
-                          placeholder="10"
-                          
-
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            />
-
-
-                        </el-form-item>
-                    </el-col>
-                    
-                    <el-col :span="12">
                         <el-form-item label="尺码类别:" prop="size_type">
 
 
@@ -191,7 +161,6 @@
     
     
     
-    import { regular } from "../../utils/validate"
     
 
     export default {
@@ -272,23 +241,6 @@
                 
                 
                 
-                inventory:[
-
-                    
-                
-
-                
-                
-
-                
-                
-                {type:'number',message:'请输入正确的数字'},
-                
-            ],
-                
-                
-                
-                
                 size_type:[
 
                     
@@ -312,9 +264,6 @@
                 
             },
 
-                
-                    
-                        
                 
                     
                         

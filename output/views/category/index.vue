@@ -1,22 +1,18 @@
 <template>
     <div class="app-container">
+      <el-card>
+        <div slot="header">
+          <span>搜索条件</span>
+        </div>
         <y-form
                 ref="categoryForm"
                 :model="categoryForm"
                 label-width="80px"
         >
-            <el-row type="flex" justify="end">
-                <el-form-item>
-                    <el-button type="success" @click="add">添加商品分类</el-button>
-                </el-form-item>
-            </el-row>
-
 
             
             
             
-            <el-row type="flex" justify="space-between">
-                <el-col :span="20">
                     <el-row>
 
                         
@@ -36,6 +32,9 @@
                                 
                                 
 
+                                
+                                
+
                                 />
                             </el-form-item>
                         </el-col>
@@ -47,26 +46,33 @@
                         
 
                     </el-row>
-                </el-col>
-                <el-col :span="4">
-                    <el-row type="flex" justify="end">
-                        <el-form-item>
-                            <el-button type="primary" @click="onSearch">查询</el-button>
-                            <el-button @click="reset" class="no-margin">重置</el-button>
-                        </el-form-item>
-                    </el-row>
-                </el-col>
-            </el-row>
+
             
 
-        </y-form>
+          <el-row type="flex" align="space-between">
+            <el-col>
+                <el-button type="primary" @click="onSearch">查询</el-button>
+                <el-button @click="reset" class="y-mr-l-10">重置</el-button>
+            </el-col>
+            <el-button type="success" @click="add">添加商品分类</el-button>
 
-        <y-table :data="categoriesData" :pagination="pagination" @sortBy="sortBy" @changePage4List="getList">
+          </el-row>
+        </y-form>
+      </el-card>
+        <y-table
+            :data="categoriesData"
+            :pagination="pagination"
+            @sortBy="sortBy"
+            @changePage4List="getList"
+            class="y-p-t-20"
+        >
             <template>
 
                 
                     
-                        <el-table-column prop="name" label="类别名"
+                        <el-table-column prop="name"
+                                         label="类别名"
+                                         align="center"
                                          
                                          
                                           >
@@ -77,7 +83,9 @@
                     
                 
                     
-                        <el-table-column prop="sort" label="排序"
+                        <el-table-column prop="sort"
+                                         label="排序"
+                                         align="center"
                                          
                                          
                                           >
@@ -88,7 +96,9 @@
                     
                 
                     
-                        <el-table-column prop="parent_id" label="父ID"
+                        <el-table-column prop="parent_id"
+                                         label="父ID"
+                                         align="center"
                                          
                                           width="100px" 
                                            align='center'   >
@@ -101,10 +111,11 @@
 
 
 
-                <el-table-column label="操作" width="100px">
+                <el-table-column label="操作" width="100px"  align="center">
                     <template slot-scope="{row}">
                         <el-button type="text" size="small" @click="edit(row.id)">修改</el-button>
-                        <el-button type="text" size="small" @click="del(row.id)">删除</el-button>
+                      <el-divider direction="vertical"></el-divider>
+                      <el-button type="text" size="small" @click="del(row.id)">删除</el-button>
                     </template>
                 </el-table-column>
             </template>

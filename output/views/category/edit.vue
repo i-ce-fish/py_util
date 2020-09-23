@@ -1,7 +1,7 @@
 <template>
     <div class="card-container">
         <el-card class="box-card">
-            <h3>修改category</h3>
+            <h3>修改商品分类</h3>
             <y-form
                     ref="categoryForm"
                     :model="categoryForm"
@@ -13,49 +13,73 @@
                     <el-col :span="12">
                         <el-form-item label="类别名:" prop="name">
 
+
+
                             
                             
                                 <y-input
                             
                             v-model="categoryForm.name"
-                            
-                            
-                            
-                            
-                            
-                            
 
+                          
+                          
+
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             />
+
+
                         </el-form-item>
                     </el-col>
                     
                     <el-col :span="12">
                         <el-form-item label="排序:" prop="sort">
 
+
+
                             
                             
                                 <y-input
                             
                             v-model="categoryForm.sort"
-                            
-                            
-                            
-                            
-                            
-                            
 
+                          
+                          
+
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             />
+
+
                         </el-form-item>
                     </el-col>
                     
                     <el-col :span="12">
                         <el-form-item label="父ID:" prop="parent_id">
 
+
+
                             
                             
                                 <y-select
                             
                             v-model="categoryForm.parent_id"
+
+                          
+                          
+
                             
                              api="/api/categories" 
                             
@@ -63,17 +87,23 @@
                             
                               labelName="catalog_name"
     valueName="id"  
-
+                            
+                            
                             />
+
+
                         </el-form-item>
                     </el-col>
                     
 
-                    <el-col :span="24">
-                        <el-form-item>
+                    <el-col >
+                      <el-row type="flex" justify="end">
+
+                      <el-form-item>
                             <el-button @click="submit('categoryForm')">提交</el-button>
                             <el-button @click="back">返回</el-button>
                         </el-form-item>
+                      </el-row>
                     </el-col>
                 </el-row>
             </y-form>
@@ -83,7 +113,7 @@
 
 <script>
 
-    import { putCategory, getCategory } from "../../api/category"
+    import { putCategory, getCategory } from "@/api/category"
 
 
     
@@ -187,7 +217,7 @@
                 this.$router.push({ path: "/category" })
 
                 this.$message({
-                    message: "添加成功",
+                    message: "修改成功",
                     type: "success"
                 })
             },
@@ -196,8 +226,6 @@
                 this.$refs.categoryForm.check((valid) => {
                     if (valid) {
                         this.putCategory()
-                    } else {
-                        return false
                     }
                 })
             }

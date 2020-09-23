@@ -1,9 +1,6 @@
 <template>
     <div class="app-container">
       <el-card>
-        <div slot="header">
-          <span>搜索条件</span>
-        </div>
         <y-form
                 ref="goodsizeForm"
                 :model="goodsizeForm"
@@ -13,30 +10,18 @@
             
             
             
-            
-            
-            
-            
-            
-            
                     <el-row>
 
                         
                         
-                        
-                        
-                        
-                        
-                        
-                        
                         <el-col :span="6">
-                            <el-form-item label="库存数量:" prop="inventory">
+                            <el-form-item label="尺码名:" prop="size_name">
 
                                 
                                 
                                 <y-input
                                 
-                                v-model="goodsizeForm.inventory"
+                                v-model="goodsizeForm.size_name"
                                 
                                 
                                 
@@ -50,6 +35,10 @@
                                 />
                             </el-form-item>
                         </el-col>
+                        
+                        
+                        
+                        
                         
                         
                         
@@ -119,19 +108,6 @@
                     
                 
                     
-                        <el-table-column prop="inventory"
-                                         label="库存数量"
-                                         align="center"
-                                         
-                                          width="120px" 
-                                          >
-
-                        
-                        
-                        </el-table-column>
-                    
-                
-                    
                         <el-table-column prop="size_type"
                                          label="尺码类别"
                                          align="center"
@@ -147,10 +123,11 @@
 
 
 
-                <el-table-column label="操作" width="100px">
+                <el-table-column label="操作" width="100px"  align="center">
                     <template slot-scope="{row}">
                         <el-button type="text" size="small" @click="edit(row.id)">修改</el-button>
-                        <el-button type="text" size="small" @click="del(row.id)">删除</el-button>
+                      <el-divider direction="vertical"></el-divider>
+                      <el-button type="text" size="small" @click="del(row.id)">删除</el-button>
                     </template>
                 </el-table-column>
             </template>

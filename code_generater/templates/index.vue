@@ -1,9 +1,6 @@
 <template>
     <div class="app-container">
       <el-card>
-        <div slot="header">
-          <span>搜索条件</span>
-        </div>
         <y-form
                 ref="{{ModelNameSingular}}Form"
                 :model="{{ModelNameSingular}}Form"
@@ -94,7 +91,8 @@
                 <el-table-column label="操作" width="100px"  align="center">
                     <template slot-scope="{row}">
                         <el-button type="text" size="small" @click="edit(row.id)">修改</el-button>
-                        <el-button type="text" size="small" @click="del(row.id)">删除</el-button>
+                      <el-divider direction="vertical"></el-divider>
+                      <el-button type="text" size="small" @click="del(row.id)">删除</el-button>
                     </template>
                 </el-table-column>
             </template>

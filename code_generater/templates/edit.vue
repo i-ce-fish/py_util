@@ -11,7 +11,12 @@
                 <el-row>
                     {% for Field in Fields%}
                     <el-col :span="12">
-                        <el-form-item label="{{Field.FieldNameCn}}:" prop="{{Field.FieldNameEn}}">
+                        <el-form-item label="{{Field.FieldNameCn}}:" prop="{{Field.FieldNameEn}}"
+                                      {# 表单域标签的宽度#}
+                                      {% if  Field.FormLabelWidth %}
+                                      label-width="{{Field.FormLabelWidth}}"
+                                      {% endif %}
+                        >
 
 
 
