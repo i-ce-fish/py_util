@@ -1404,10 +1404,10 @@
     ]
   },
   {
-    "Discription": "品牌",
+    "Discription": "",
     "ModelNameSingular": "goodbrand",
     "ModelNamePlural": "goodbrands",
-    "ModuleNameCn": "品牌",
+    "ModuleNameCn": "品牌名称",
     "TableName": "goodbrand",
     "Fields": [
       {
@@ -1427,23 +1427,6 @@
         "VueEndMark": "标记以便于搜索替换"
       },
       {
-        "FieldNameCn": "品牌类型",
-        "FieldType": "String(45)",
-        "FieldNameEn": "brand_type",
-        "Description": "",
-        "Editable": true,
-        "Searchable": false,
-        "Orderable": true,
-        "VueShowinList": true,
-        "VueListWidth": "",
-        "VueListConfig": "",
-        "VueComponent": "y-select",
-        "VueComponentConfig": ":options=\"[{value: '1',label: '1'},{value: '0',label: '2'}]\"",
-        "VueRegx": "",
-        "VueFormTips": "",
-        "VueEndMark": "标记以便于搜索替换"
-      },
-      {
         "FieldNameCn": "品牌英文名",
         "FieldType": "String(45)",
         "FieldNameEn": "brand_eng",
@@ -1454,30 +1437,13 @@
         "VueListWidth": "",
         "VueListConfig": "",
         "VueComponent": "y-input",
-        "VueComponentConfig": "",
+        "VueComponentConfig": "placeholder='如果没有就不用填'",
         "VueRegx": "",
         "VueFormTips": "",
         "VueEndMark": "标记以便于搜索替换"
       },
       {
-        "FieldNameCn": "价格定位",
-        "FieldType": "String(45)",
-        "FieldNameEn": "price_object",
-        "Description": "",
-        "Orderable": true,
-        "Editable": true,
-        "Searchable": false,
-        "VueShowinList": true,
-        "VueListWidth": "",
-        "VueListConfig": "",
-        "VueComponent": "y-input",
-        "VueComponentConfig": "",
-        "VueRegx": "",
-        "VueFormTips": "",
-        "VueEndMark": "标记以便于搜索替换"
-      },
-      {
-        "FieldNameCn": "品牌简写",
+        "FieldNameCn": "品牌名称简写",
         "FieldType": "String(45)",
         "FieldNameEn": "brand_abbr",
         "Description": "",
@@ -1492,43 +1458,11 @@
         "VueFormTips": "",
         "VueEndMark": "标记以便于搜索替换"
       },
+
       {
-        "FieldNameCn": "客群年龄",
+        "FieldNameCn": "品牌编码",
         "FieldType": "String(45)",
-        "FieldNameEn": "age_object",
-        "Description": "",
-        "Editable": true,
-        "Searchable": false,
-        "Orderable": true,
-        "VueShowinList": true,
-        "VueListWidth": "",
-        "VueListConfig": "",
-        "VueComponent": "y-input",
-        "VueComponentConfig": "",
-        "VueRegx": "",
-        "VueFormTips": "",
-        "VueEndMark": "标记以便于搜索替换"
-      },
-      {
-        "FieldNameCn": "品牌所属",
-        "FieldType": "String(255)",
-        "FieldNameEn": "brand_belonged",
-        "Description": "",
-        "Editable": true,
-        "Searchable": false,
-        "VueShowinList": true,
-        "VueListWidth": "",
-        "VueListConfig": "",
-        "VueComponent": "y-input",
-        "VueComponentConfig": "",
-        "VueRegx": "",
-        "VueFormTips": "",
-        "VueEndMark": "标记以便于搜索替换"
-      },
-      {
-        "FieldNameCn": "风格定位",
-        "FieldType": "String(45)",
-        "FieldNameEn": "style_object",
+        "FieldNameEn": "fieldname",
         "Description": "",
         "Editable": true,
         "Searchable": false,
@@ -1537,7 +1471,7 @@
         "Orderable": true,
         "VueListConfig": "",
         "VueComponent": "y-input",
-        "VueComponentConfig": "",
+        "VueComponentConfig": "placeholder='请输入两位数字。示范: 66'",
         "VueRegx": "",
         "VueFormTips": "",
         "VueEndMark": "标记以便于搜索替换"
