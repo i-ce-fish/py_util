@@ -172,11 +172,8 @@
     }
 </script>
 
-<style lang='scss' scope>
-    .app-container {
-        padding: 20px;
-        .no-margin{
-            margin: 0;
-        }
-    }
+<style lang='scss' scoped>
+.app-container {
+
+}
 </style>

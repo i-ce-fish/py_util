@@ -151,12 +151,8 @@
         }
     }
 </script>
-<style lang='scss' scope>
+<style lang='scss' scoped>
     .card-container {
-        background-color: #f0f2f5;
-        padding: 30px;
-        min-height: 100vh;
-
         .box-card {
 
         }
