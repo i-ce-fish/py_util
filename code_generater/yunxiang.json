@@ -26,7 +26,6 @@
         "FormLabelWidth": "20px",
         "VueEndMark": ""
       },
-
       {
         "FieldNameCn": "字段2",
         "VueComponent": "y-input",
@@ -47,7 +46,6 @@
         "FormLabelWidth": "120px",
         "VueEndMark": ""
       },
-
       {
         "FieldNameCn": "字段2",
         "VueComponent": "y-input",
@@ -1404,10 +1402,10 @@
     ]
   },
   {
-    "Discription": "品牌",
+    "Discription": "",
     "ModelNameSingular": "goodbrand",
     "ModelNamePlural": "goodbrands",
-    "ModuleNameCn": "品牌",
+    "ModuleNameCn": "品牌名称",
     "TableName": "goodbrand",
     "Fields": [
       {
@@ -1427,23 +1425,6 @@
         "VueEndMark": "标记以便于搜索替换"
       },
       {
-        "FieldNameCn": "品牌类型",
-        "FieldType": "String(45)",
-        "FieldNameEn": "brand_type",
-        "Description": "",
-        "Editable": true,
-        "Searchable": false,
-        "Orderable": true,
-        "VueShowinList": true,
-        "VueListWidth": "",
-        "VueListConfig": "",
-        "VueComponent": "y-select",
-        "VueComponentConfig": ":options=\"[{value: '1',label: '1'},{value: '0',label: '2'}]\"",
-        "VueRegx": "",
-        "VueFormTips": "",
-        "VueEndMark": "标记以便于搜索替换"
-      },
-      {
         "FieldNameCn": "品牌英文名",
         "FieldType": "String(45)",
         "FieldNameEn": "brand_eng",
@@ -1454,30 +1435,13 @@
         "VueListWidth": "",
         "VueListConfig": "",
         "VueComponent": "y-input",
-        "VueComponentConfig": "",
+        "VueComponentConfig": "placeholder='如果没有就不用填'",
         "VueRegx": "",
         "VueFormTips": "",
         "VueEndMark": "标记以便于搜索替换"
       },
       {
-        "FieldNameCn": "价格定位",
-        "FieldType": "String(45)",
-        "FieldNameEn": "price_object",
-        "Description": "",
-        "Orderable": true,
-        "Editable": true,
-        "Searchable": false,
-        "VueShowinList": true,
-        "VueListWidth": "",
-        "VueListConfig": "",
-        "VueComponent": "y-input",
-        "VueComponentConfig": "",
-        "VueRegx": "",
-        "VueFormTips": "",
-        "VueEndMark": "标记以便于搜索替换"
-      },
-      {
-        "FieldNameCn": "品牌简写",
+        "FieldNameCn": "品牌名称简写",
         "FieldType": "String(45)",
         "FieldNameEn": "brand_abbr",
         "Description": "",
@@ -1493,42 +1457,9 @@
         "VueEndMark": "标记以便于搜索替换"
       },
       {
-        "FieldNameCn": "客群年龄",
+        "FieldNameCn": "品牌编码",
         "FieldType": "String(45)",
-        "FieldNameEn": "age_object",
-        "Description": "",
-        "Editable": true,
-        "Searchable": false,
-        "Orderable": true,
-        "VueShowinList": true,
-        "VueListWidth": "",
-        "VueListConfig": "",
-        "VueComponent": "y-input",
-        "VueComponentConfig": "",
-        "VueRegx": "",
-        "VueFormTips": "",
-        "VueEndMark": "标记以便于搜索替换"
-      },
-      {
-        "FieldNameCn": "品牌所属",
-        "FieldType": "String(255)",
-        "FieldNameEn": "brand_belonged",
-        "Description": "",
-        "Editable": true,
-        "Searchable": false,
-        "VueShowinList": true,
-        "VueListWidth": "",
-        "VueListConfig": "",
-        "VueComponent": "y-input",
-        "VueComponentConfig": "",
-        "VueRegx": "",
-        "VueFormTips": "",
-        "VueEndMark": "标记以便于搜索替换"
-      },
-      {
-        "FieldNameCn": "风格定位",
-        "FieldType": "String(45)",
-        "FieldNameEn": "style_object",
+        "FieldNameEn": "fieldname",
         "Description": "",
         "Editable": true,
         "Searchable": false,
@@ -1537,7 +1468,7 @@
         "Orderable": true,
         "VueListConfig": "",
         "VueComponent": "y-input",
-        "VueComponentConfig": "",
+        "VueComponentConfig": "placeholder='请输入两位数字。示范: 66'",
         "VueRegx": "",
         "VueFormTips": "",
         "VueEndMark": "标记以便于搜索替换"
@@ -1642,7 +1573,6 @@
         "VueFormTips": "",
         "VueEndMark": ""
       },
-
       {
         "FieldNameCn": "品牌中文名",
         "VueComponent": "y-input",
@@ -1662,7 +1592,6 @@
         "VueFormTips": "",
         "VueEndMark": ""
       },
-
       {
         "FieldNameCn": "品牌英文名",
         "VueComponent": "y-input",
@@ -1682,7 +1611,6 @@
         "VueFormTips": "",
         "VueEndMark": ""
       },
-
       {
         "FieldNameCn": "品牌简写",
         "VueComponent": "y-input",
@@ -1703,166 +1631,278 @@
         "VueEndMark": ""
       }
     ]
-  },  {
-  "TableName": "test",
-  "ModelNameSingular": "test",
-  "ModelNamePlural": "tests",
-  "ModuleNameCn": "测试模板",
-  "Discription": "测试模板是否正确",
-  "Fields": [
-    {
-      "FieldNameCn": "字段1",
-      "FieldNameEn": "field1",
-      "FieldType": "String(60)",
-      "VueComponent": "y-input",
-      "Description": "",
-      "Editable": true,
-      "Searchable": false,
-      "IsOutput": true,
-      "IsRequired": true,
-      "Orderable": false,
-      "VueShowinList": true,
-      "VueListWidth": "",
-      "VueListConfig": "",
-      "VueComponentConfig": "",
-      "VueRegx": "",
-      "VueFormTips": "",
-      "VueEndMark": ""
-    },
-
-    {
-      "FieldNameCn": "字段2",
-      "VueComponent": "y-input",
-      "FieldNameEn": "field2",
-      "FieldType": "String(60)",
-      "Description": "",
-      "Editable": true,
-      "Searchable": false,
-      "IsOutput": true,
-      "IsRequired": true,
-      "Orderable": false,
-      "VueShowinList": true,
-      "VueListWidth": "",
-      "VueListConfig": "",
-      "VueComponentConfig": "",
-      "VueRegx": "",
-      "VueFormTips": "",
-      "VueEndMark": ""
-    }
-  ]
-},  {
-  "TableName": "test",
-  "ModelNameSingular": "test",
-  "ModelNamePlural": "tests",
-  "ModuleNameCn": "大类名称",
-  "Discription": "测试模板是否正确",
-  "Fields": [
-    {
-      "FieldNameCn": "大类名称",
-      "FieldNameEn": "field1",
-      "FieldType": "String(60)",
-      "VueComponent": "y-input",
-      "Description": "",
-      "Editable": true,
-      "Searchable": false,
-      "IsOutput": true,
-      "IsRequired": true,
-      "Orderable": false,
-      "VueShowinList": true,
-      "VueListWidth": "",
-      "VueListConfig": "",
-      "VueComponentConfig": "",
-      "VueRegx": "",
-      "VueFormTips": "",
-      "VueEndMark": ""
-    },
-
-    {
-      "FieldNameCn": "大类别名",
-      "VueComponent": "y-input",
-      "FieldNameEn": "field2",
-      "FieldType": "String(60)",
-      "Description": "",
-      "Editable": true,
-      "Searchable": false,
-      "IsOutput": true,
-      "IsRequired": true,
-      "Orderable": false,
-      "VueShowinList": true,
-      "VueListWidth": "",
-      "VueListConfig": "",
-      "VueComponentConfig": "",
-      "VueRegx": "",
-      "VueFormTips": "",
-      "VueEndMark": ""
-    }
-  ]
-},  {
-  "TableName": "test",
-  "ModelNameSingular": "test",
-  "ModelNamePlural": "tests",
-  "ModuleNameCn": "颜色名称",
-  "Discription": "测试模板是否正确",
-  "Fields": [
-    {
-      "FieldNameCn": "颜色名称",
-      "FieldNameEn": "field1",
-      "FieldType": "String(60)",
-      "VueComponent": "y-input",
-      "Description": "",
-      "Editable": true,
-      "Searchable": false,
-      "IsOutput": true,
-      "IsRequired": true,
-      "Orderable": false,
-      "VueShowinList": true,
-      "VueListWidth": "",
-      "VueListConfig": "",
-      "VueComponentConfig": "",
-      "VueRegx": "",
-      "VueFormTips": "",
-      "VueEndMark": ""
-    },
-
-    {
-      "FieldNameCn": "色系",
-      "VueComponent": "y-input",
-      "FieldNameEn": "field2",
-      "FieldType": "String(60)",
-      "Description": "",
-      "Editable": true,
-      "Searchable": false,
-      "IsOutput": true,
-      "IsRequired": true,
-      "Orderable": false,
-      "VueShowinList": true,
-      "VueListWidth": "",
-      "VueListConfig": "",
-      "VueComponentConfig": "",
-      "VueRegx": "",
-      "VueFormTips": "",
-      "VueEndMark": ""
-    },
-
-    {
-      "FieldNameCn": "编码",
-      "VueComponent": "y-input",
-      "FieldNameEn": "field2",
-      "FieldType": "String(60)",
-      "Description": "",
-      "Editable": true,
-      "Searchable": false,
-      "IsOutput": true,
-      "IsRequired": true,
-      "Orderable": false,
-      "VueShowinList": true,
-      "VueListWidth": "",
-      "VueListConfig": "",
-      "VueComponentConfig": "",
-      "VueRegx": "",
-      "VueFormTips": "",
-      "VueEndMark": ""
-    }
-  ]
-}
+  },
+  {
+    "TableName": "test",
+    "ModelNameSingular": "test",
+    "ModelNamePlural": "tests",
+    "ModuleNameCn": "测试模板",
+    "Discription": "测试模板是否正确",
+    "Fields": [
+      {
+        "FieldNameCn": "字段1",
+        "FieldNameEn": "field1",
+        "FieldType": "String(60)",
+        "VueComponent": "y-input",
+        "Description": "",
+        "Editable": true,
+        "Searchable": false,
+        "IsOutput": true,
+        "IsRequired": true,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      },
+      {
+        "FieldNameCn": "字段2",
+        "VueComponent": "y-input",
+        "FieldNameEn": "field2",
+        "FieldType": "String(60)",
+        "Description": "",
+        "Editable": true,
+        "Searchable": false,
+        "IsOutput": true,
+        "IsRequired": true,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      }
+    ]
+  },
+  {
+    "TableName": "test",
+    "ModelNameSingular": "test",
+    "ModelNamePlural": "tests",
+    "ModuleNameCn": "大类名称",
+    "Discription": "测试模板是否正确",
+    "Fields": [
+      {
+        "FieldNameCn": "大类名称",
+        "FieldNameEn": "name",
+        "FieldType": "String(60)",
+        "VueComponent": "y-input",
+        "Description": "",
+        "Editable": true,
+        "Searchable": true,
+        "IsOutput": true,
+        "IsRequired": true,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      },
+      {
+        "FieldNameCn": "大类别名",
+        "VueComponent": "y-input",
+        "FieldNameEn": "alias",
+        "FieldType": "String(60)",
+        "Description": "",
+        "Editable": true,
+        "Searchable": false,
+        "IsOutput": true,
+        "IsRequired": true,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      }
+    ]
+  },
+  {
+    "TableName": "big_category",
+    "ModelNameSingular": "test",
+    "ModelNamePlural": "tests",
+    "ModuleNameCn": "小类名称",
+    "Discription": "测试模板是否正确",
+    "Fields": [
+      {
+        "FieldNameCn": "小类名称",
+        "FieldNameEn": "name",
+        "FieldType": "String(60)",
+        "VueComponent": "y-input",
+        "Description": "",
+        "Editable": true,
+        "Searchable": true,
+        "IsOutput": true,
+        "IsRequired": true,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      },
+      {
+        "FieldNameCn": "小类别名",
+        "VueComponent": "y-input",
+        "FieldNameEn": "alias",
+        "FieldType": "String(60)",
+        "Description": "",
+        "Editable": true,
+        "Searchable": false,
+        "IsOutput": true,
+        "IsRequired": true,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      },
+      {
+        "FieldNameCn": "所属大类",
+        "VueComponent": "y-select",
+        "FieldNameEn": "parent_id",
+        "FieldType": "String(60)",
+        "Description": "",
+        "Editable": true,
+        "Searchable": false,
+        "IsOutput": true,
+        "IsRequired": true,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      }
+    ]
+  },
+  {
+    "TableName": "test",
+    "ModelNameSingular": "test",
+    "ModelNamePlural": "tests",
+    "ModuleNameCn": "大类名称",
+    "Discription": "测试模板是否正确",
+    "Fields": [
+      {
+        "FieldNameCn": "大类名称",
+        "FieldNameEn": "name",
+        "FieldType": "String(60)",
+        "VueComponent": "y-input",
+        "Description": "",
+        "Editable": true,
+        "Searchable": true,
+        "IsOutput": true,
+        "IsRequired": true,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      },
+      {
+        "FieldNameCn": "大类别名",
+        "VueComponent": "y-input",
+        "FieldNameEn": "alias",
+        "FieldType": "String(60)",
+        "Description": "",
+        "Editable": true,
+        "Searchable": false,
+        "IsOutput": true,
+        "IsRequired": true,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      }
+    ]
+  },
+  {
+    "TableName": "test",
+    "ModelNameSingular": "test",
+    "ModelNamePlural": "tests",
+    "ModuleNameCn": "颜色名称",
+    "Discription": "测试模板是否正确",
+    "Fields": [
+      {
+        "FieldNameCn": "颜色名称",
+        "FieldNameEn": "field1",
+        "FieldType": "String(60)",
+        "VueComponent": "y-input",
+        "Description": "",
+        "Editable": true,
+        "Searchable": false,
+        "IsOutput": true,
+        "IsRequired": true,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      },
+      {
+        "FieldNameCn": "色系",
+        "VueComponent": "y-input",
+        "FieldNameEn": "field2",
+        "FieldType": "String(60)",
+        "Description": "",
+        "Editable": true,
+        "Searchable": false,
+        "IsOutput": true,
+        "IsRequired": true,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      },
+      {
+        "FieldNameCn": "编码",
+        "VueComponent": "y-input",
+        "FieldNameEn": "field2",
+        "FieldType": "String(60)",
+        "Description": "",
+        "Editable": true,
+        "Searchable": false,
+        "IsOutput": true,
+        "IsRequired": true,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "VueEndMark": ""
+      }
+    ]
+  }
 ]
