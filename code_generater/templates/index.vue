@@ -119,15 +119,15 @@
         },
         methods: {
             async getList(param) {
-                const response = await get{{ModelNamePlural|title}}(
+                const {data} = await get{{ModelNamePlural|title}}(
                     {
                         ...param,
                         page: this.pagination.pageNumber,
                         pagesize: this.pagination.pageSize
                     }
                 )
-                this.{{ModelNamePlural}}Data = response.data.list
-                this.pagination.total = parseInt(response.data.pagination.total, 10)
+                this.{{ModelNamePlural}}Data = data.list
+                this.pagination.total = data.pagination.total
             },
 
             add() {
