@@ -54,7 +54,7 @@
                       <el-row type="flex" justify="end">
 
                       <el-form-item>
-                            <el-button @click="submit('{{ModelNameSingular}}Form')">提交</el-button>
+                            <el-button @click="submit('{{ModelNameSingular}}Form')" type="primary">提交</el-button>
                             <el-button @click="back">返回</el-button>
                         </el-form-item>
                       </el-row>

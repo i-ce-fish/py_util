@@ -15,7 +15,7 @@
         "Editable": true,
         "Searchable": false,
         "IsOutput": true,
-        "IsRequired": true,
+        "IsRequired": false,
         "Orderable": false,
         "VueShowinList": true,
         "VueListWidth": "",
@@ -34,7 +34,7 @@
         "Description": "",
         "Editable": true,
         "Searchable": false,
-        "IsOutput": true,
+        "IsOutput": false,
         "IsRequired": true,
         "Orderable": false,
         "VueShowinList": true,
@@ -1325,16 +1325,16 @@
   },
   {
     "Discription": "衣服印花图案",
-    "ModelNameSingular": "pattern",
-    "ModelNamePlural": "patterns",
-    "ModuleNameCn": "图案",
-    "TableName": "pattern",
+    "ModelNameSingular": "goodpattern",
+    "ModelNamePlural": "goodpatterns",
+    "ModuleNameCn": "商品图案",
+    "TableName": "goodpattern",
     "Fields": [
       {
         "FieldNameCn": "图案名称",
         "Description": "",
         "Editable": true,
-        "FieldNameEn": "name",
+        "FieldNameEn": "pattern_name",
         "Searchable": true,
         "VueShowinList": true,
         "VueListWidth": "",
@@ -1346,15 +1346,15 @@
         "VueEndMark": "标记以便于搜索替换"
       },
       {
-        "FieldNameCn": "图案图片",
+        "FieldNameCn": "父级图案名称",
         "Description": "",
         "Editable": true,
-        "FieldNameEn": "pic",
+        "FieldNameEn": "parent_id",
         "Searchable": false,
         "VueShowinList": true,
         "VueListWidth": "",
         "VueListConfig": "",
-        "VueComponent": "y-upload-image",
+        "VueComponent": "y-select",
         "VueComponentConfig": "",
         "VueRegx": "",
         "VueFormTips": "",
@@ -1904,5 +1904,73 @@
         "VueEndMark": ""
       }
     ]
-  }
+  },  {
+  "TableName": "goodfabric",
+  "ModelNameSingular": "goodfabric",
+  "ModelNamePlural": "goodfabrics",
+  "ModuleNameCn": "面料名称",
+  "Discription": "",
+  "Fields": [
+    {
+      "FieldNameCn": "面料类别",
+      "FieldNameEn": "category",
+      "FieldType": "String(255)",
+      "VueComponent": "y-select",
+      "Description": "",
+      "Editable": true,
+      "Searchable": false,
+      "IsOutput": true,
+      "IsRequired": true,
+      "Orderable": false,
+      "VueShowinList": true,
+      "VueListWidth": "",
+      "VueListConfig": "",
+      "VueComponentConfig": "",
+      "VueRegx": "",
+      "VueFormTips": "",
+      "FormLabelWidth": "",
+      "VueEndMark": ""
+    },
+    {
+      "FieldNameCn": "面料名称",
+      "VueComponent": "y-input",
+      "FieldNameEn": "name",
+      "FieldType": "String(255)",
+      "Description": "",
+      "Editable": true,
+      "Searchable": true,
+      "IsOutput": true,
+      "IsRequired": true,
+      "Orderable": false,
+      "VueShowinList": true,
+      "VueListWidth": "",
+      "VueListConfig": "",
+      "VueComponentConfig": "",
+      "VueRegx": "",
+      "VueFormTips": "",
+      "FormLabelWidth": "",
+      "VueEndMark": ""
+    },
+    {
+      "FieldNameCn": "面料别名",
+      "VueComponent": "y-input",
+      "FieldNameEn": "fabric_alias",
+      "FieldType": "String(255)",
+      "Description": "",
+      "Editable": true,
+      "Searchable": false,
+      "IsOutput": true,
+      "IsRequired": false,
+      "Orderable": false,
+      "VueShowinList": true,
+      "VueListWidth": "",
+      "VueListConfig": "",
+      "VueComponentConfig": "",
+      "VueRegx": "",
+      "VueFormTips": "",
+      "FormLabelWidth": "",
+      "VueEndMark": ""
+    }
+  ]
+}
 ]
