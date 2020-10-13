@@ -8,7 +8,7 @@
                     :rules="{{ModelNameSingular}}Rules"
                     label-width="100px"
             >
-                <el-row>
+                <el-row :gutter="20">
                     {% for Field in Fields%}
                     <el-col :span="12">
                         <el-form-item
