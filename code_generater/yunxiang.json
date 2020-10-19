@@ -1,10 +1,40 @@
 [
   {
+    "introduction": "此json文件说明文档",
+    "TableName": "",
+    "ModelNameSingular": "[必填项] 模块名的单数,用作生成的文件名",
+    "ModelNamePlural": "[必填项] 模块名的复数形式,用在api文件的列表接口",
+    "ModuleNameCn": "[必填项] 模块名的中文名,用在侧边栏的标题,添加xx和修改xx ",
+    "Discription": "当前模块的描述, 不参与生成",
+    "Fields": [
+      {
+        "FieldNameCn": "[必填项] 字段的中文名,用在index文件的表头、add和edit文件的表单label",
+        "FieldNameEn": "[必填项] 字段的英文名,由接口文档确定, 用在服务器接口参数的对接和表单校验",
+        "FieldType": "[必填项] 字段类型,Boolean类型会直接生成为y-radio组件; String(50)类型要带上长度并自动生成相应的的长度校验",
+        "VueComponent": "[必填项] add、edit以及index中的查询表单 所使用的表单组件,",
+        "Description": "[不生成]当前字段的描述",
+        "Editable": "[必填项,布尔类型] add、edit以及index中的 表单组件是否处于禁用状态",
+        "Searchable": "[必填项,布尔类型]  index中的 查询组件是否生成",
+        "IsOutput": "",
+        "IsRequired": "[必填项,布尔类型]  add、edit以及index中的 表单校验是否必填项",
+        "Orderable": "[必填项,布尔类型]  index表格中是否允许排序, 需要后端支持",
+        "VueShowinList": "[必填项,布尔类型]  index表格中的列是否生成",
+        "VueListWidth": "[可选项] index表格中的列宽度",
+        "VueListConfig": "[可选项] index表格中column的自定义参数",
+        "VueComponentConfig": "[可选项] add、edit以及index中的 表单组件的自定义参数",
+        "VueRegx": "[可选项] add、edit以及index中的 表单组件的自定义校验",
+        "VueFormTips": "[可选项] add、edit以及index中的 表单组件中的tips信息",
+        "FormLabelWidth": "[可选项] add、edit以及index中的 表单组件中label宽度",
+        "VueEndMark": "[不生成] 标记当前文件的结束位置,用作批量添加新的参数"
+      }
+    ]
+  },
+  {
     "TableName": "test",
     "ModelNameSingular": "test",
     "ModelNamePlural": "tests",
     "ModuleNameCn": "测试模板",
-    "Discription": "测试模板是否正确",
+    "Discription": "用来测试模板是否正确的生成",
     "Fields": [
       {
         "FieldNameCn": "字段1",
@@ -1413,7 +1443,8 @@
         "VueRegx": "",
         "VueFormTips": "",
         "VueEndMark": "标记以便于搜索替换"
-      }, {
+      },
+      {
         "FieldNameCn": "归属材质大类",
         "Description": "",
         "Editable": true,
@@ -1933,73 +1964,74 @@
         "VueEndMark": ""
       }
     ]
-  },  {
-  "TableName": "goodfabric",
-  "ModelNameSingular": "goodfabric",
-  "ModelNamePlural": "goodfabrics",
-  "ModuleNameCn": "面料名称",
-  "Discription": "",
-  "Fields": [
-    {
-      "FieldNameCn": "面料类别",
-      "FieldNameEn": "category",
-      "FieldType": "String(255)",
-      "VueComponent": "y-select",
-      "Description": "",
-      "Editable": true,
-      "Searchable": false,
-      "IsOutput": true,
-      "IsRequired": true,
-      "Orderable": false,
-      "VueShowinList": true,
-      "VueListWidth": "",
-      "VueListConfig": "",
-      "VueComponentConfig": "",
-      "VueRegx": "",
-      "VueFormTips": "",
-      "FormLabelWidth": "",
-      "VueEndMark": ""
-    },
-    {
-      "FieldNameCn": "面料名称",
-      "VueComponent": "y-input",
-      "FieldNameEn": "name",
-      "FieldType": "String(255)",
-      "Description": "",
-      "Editable": true,
-      "Searchable": true,
-      "IsOutput": true,
-      "IsRequired": true,
-      "Orderable": false,
-      "VueShowinList": true,
-      "VueListWidth": "",
-      "VueListConfig": "",
-      "VueComponentConfig": "",
-      "VueRegx": "",
-      "VueFormTips": "",
-      "FormLabelWidth": "",
-      "VueEndMark": ""
-    },
-    {
-      "FieldNameCn": "面料别名",
-      "VueComponent": "y-input",
-      "FieldNameEn": "fabric_alias",
-      "FieldType": "String(255)",
-      "Description": "",
-      "Editable": true,
-      "Searchable": false,
-      "IsOutput": true,
-      "IsRequired": false,
-      "Orderable": false,
-      "VueShowinList": true,
-      "VueListWidth": "",
-      "VueListConfig": "",
-      "VueComponentConfig": "",
-      "VueRegx": "",
-      "VueFormTips": "",
-      "FormLabelWidth": "",
-      "VueEndMark": ""
-    }
-  ]
-}
+  },
+  {
+    "TableName": "goodfabric",
+    "ModelNameSingular": "goodfabric",
+    "ModelNamePlural": "goodfabrics",
+    "ModuleNameCn": "面料名称",
+    "Discription": "",
+    "Fields": [
+      {
+        "FieldNameCn": "面料类别",
+        "FieldNameEn": "category",
+        "FieldType": "String(255)",
+        "VueComponent": "y-select",
+        "Description": "",
+        "Editable": true,
+        "Searchable": false,
+        "IsOutput": true,
+        "IsRequired": true,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "FormLabelWidth": "",
+        "VueEndMark": ""
+      },
+      {
+        "FieldNameCn": "面料名称",
+        "VueComponent": "y-input",
+        "FieldNameEn": "name",
+        "FieldType": "String(255)",
+        "Description": "",
+        "Editable": true,
+        "Searchable": true,
+        "IsOutput": true,
+        "IsRequired": true,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "FormLabelWidth": "",
+        "VueEndMark": ""
+      },
+      {
+        "FieldNameCn": "面料别名",
+        "VueComponent": "y-input",
+        "FieldNameEn": "fabric_alias",
+        "FieldType": "String(255)",
+        "Description": "",
+        "Editable": true,
+        "Searchable": false,
+        "IsOutput": true,
+        "IsRequired": false,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "FormLabelWidth": "",
+        "VueEndMark": ""
+      }
+    ]
+  }
 ]
