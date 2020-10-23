@@ -2033,5 +2033,74 @@
         "VueEndMark": ""
       }
     ]
+  },
+  {
+    "TableName": "supplierinfo",
+    "ModelNameSingular": "supplierinfo",
+    "ModelNamePlural": "supplierinfos",
+    "ModuleNameCn": "供货商通讯录",
+    "Discription": "",
+    "Fields": [
+      {
+        "FieldNameCn": "供货商编号",
+        "FieldNameEn": "supplier_code",
+        "FieldType": "",
+        "VueComponent": "y-input",
+        "Description": "",
+        "Editable": true,
+        "Searchable": true,
+        "IsOutput": true,
+        "IsRequired": false,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "FormLabelWidth": "20px",
+        "VueEndMark": ""
+      },
+      {
+        "FieldNameCn": "字段2",
+        "VueComponent": "y-input",
+        "FieldNameEn": "field2",
+        "FieldType": "",
+        "Description": "",
+        "Editable": true,
+        "Searchable": false,
+        "IsOutput": false,
+        "IsRequired": true,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "FormLabelWidth": "120px",
+        "VueEndMark": ""
+      },
+      {
+        "FieldNameCn": "字段2",
+        "VueComponent": "y-input",
+        "FieldNameEn": "field3",
+        "FieldType": "String(60)",
+        "Description": "",
+        "Editable": true,
+        "Searchable": false,
+        "IsOutput": true,
+        "IsRequired": true,
+        "Orderable": false,
+        "VueShowinList": true,
+        "VueListWidth": "",
+        "VueListConfig": "",
+        "VueComponentConfig": "",
+        "VueRegx": "",
+        "VueFormTips": "",
+        "FormLabelWidth": "",
+        "VueEndMark": ""
+      }
+    ]
   }
 ]
