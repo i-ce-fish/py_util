@@ -22,19 +22,13 @@
 
 
 
-
                           {#  判断Field.FieldType是否布尔类型，直接显示为单选框  #}
-                            {% if  Field.FieldType == 'Boolean'  %}
-                            <y-radio
-                            {% else %}
                             <{{ Field.VueComponent }}
-                            {% endif %}
                                 v-model="{{ModelNameSingular}}Form.{{Field.FieldNameEn}}"
                                 {# 提示符#}
                                 {% if  Field.VueFormPlaceholder %}
                                 placeholder="{{Field.VueFormPlaceholder}}"
                                 {% endif %}
-
 
 
 
