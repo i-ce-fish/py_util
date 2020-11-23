@@ -133,15 +133,16 @@
                     cancelButtonText: "取消",
                     type: "warning"
                 })
-                    .then(() => {
-                        del{{ModelNameSingular|title}}(id).then((response) => {
-                            this.$message({
-                                type: "success",
-                                message: "删除成功!"
-                            })
-                            this.getList()
+                    .then(() =>
+                        del{{ModelNameSingular|title}}(id)
+                    )
+                    .then((response) => {
+                        this.$message({
+                          type: "success",
+                          message: "删除成功!"
                         })
-                    })
+                        this.getList()
+                      })
                     .catch(() => {
                         this.$message({
                             type: "info",
